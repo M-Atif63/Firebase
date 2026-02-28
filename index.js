@@ -18,8 +18,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+console.log("InitApp=>",app)
 const auth = getAuth(app)
-console.log(auth)
+console.log("auth=>",auth)
 // const analytics = getAnalytics(app);
 
 
@@ -30,18 +31,18 @@ btn.addEventListener("click", signup)
 function signup() {
     var uemail = document.getElementById("uemail").value
     var upassword = document.getElementById("upassword").value
-console.log(uemail,upassword)
-}
-
-
-createUserWithEmailAndPassword(auth, email, password)
+    console.log("usename=>",uemail, "useremail=>",upassword)
+    
+    
+createUserWithEmailAndPassword(auth, uemail, upassword)
     .then((userCredential) => {
-        // Signed up 
         const user = userCredential.user;
-        // ...
+        console.log("user=>", user)
     })
     .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
+        console.log("Error=>", errorMessage)
+        // console.log("Error=>", errorCode)
     });
+}
