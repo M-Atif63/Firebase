@@ -10,10 +10,10 @@ const firebaseConfig = {
     apiKey: prcess.env.API_KEY,
     authDomain: Process.env.AUTH_DOMAIN,
     projectId: Process.env.PROJECT_ID,
-    storageBucket: "ecommerce-c3693.firebasestorage.app",
-    messagingSenderId: "964054110394",
-    appId: "1:964054110394:web:eddb9f4bbb3599bceb3283",
-    measurementId: "G-ZF0Z8YDQX5"
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.ASSIGNING_SENDER_ID,
+    appId: process.env.APP_ID,
+    measurementId: process.env.MEASUREMENT_ID
 };
 
 // Initialize Firebase
