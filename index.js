@@ -7,9 +7,9 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyCcjdqVp7As57l179jjHS_Jeg40JVUXxLQ",
-    authDomain: "ecommerce-c3693.firebaseapp.com",
-    projectId: "ecommerce-c3693",
+    apiKey: prcess.env.API_KEY,
+    authDomain: Process.env.AUTH_DOMAIN,
+    projectId: Process.env.PROJECT_ID,
     storageBucket: "ecommerce-c3693.firebasestorage.app",
     messagingSenderId: "964054110394",
     appId: "1:964054110394:web:eddb9f4bbb3599bceb3283",
