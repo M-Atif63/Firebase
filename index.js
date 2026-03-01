@@ -1,13 +1,16 @@
+// require('dotenv').config();
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
+import dotenv from "dotenv"
+dotenv.config();
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+console.log(`mera variable`,process.env.API_KEY,`hai`)
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: prcess.env.API_KEY,
+    apiKey: process.env.API_KEY,
     authDomain: Process.env.AUTH_DOMAIN,
     projectId: Process.env.PROJECT_ID,
     storageBucket: process.env.STORAGE_BUCKET,
