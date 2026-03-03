@@ -1,15 +1,15 @@
-// require('dotenv').config();
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
-// import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
+// // require('dotenv').config();
+// // import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+// // import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
 
-// import dotenv from "dotenv"
-// dotenv.config();
+// // import dotenv from "dotenv"
+// // dotenv.config();
 
-// import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-// console.log(`mera variable`,process.env.API_KEY,`hai`)
-// Your web app's Firebase configuration
+// // import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+// // console.log(`mera variable`,process.env.API_KEY,`hai`)
+// // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 // const firebaseConfig = {
 //     apiKey: process.env.API_KEY,
@@ -21,43 +21,41 @@
 //     measurementId: process.env.MEASUREMENT_ID
 // };
 
-// Initialize Firebase
+// // Initialize Firebase
 
-// const app = initializeApp(firebaseConfig);
+// // const app = initializeApp(firebaseConfig);
 
-// console.log("InitApp=>",app)
+// // console.log("InitApp=>",app)
 
-// const auth = getAuth(app)
+// // const auth = getAuth(app)
 
-// console.log("auth=>",auth)
+// // console.log("auth=>",auth)
 
-// // const analytics = getAnalytics(app);
-
-
-// // SignUp
-// var btn = document.getElementById("signupBtn")
-// btn.addEventListener("click", signup)
-
-// function signup() {
-//     var uemail = document.getElementById("uemail").value
-//     var upassword = document.getElementById("upassword").value
-//     console.log("usename=>",uemail, "useremail=>",upassword)
+// // // const analytics = getAnalytics(app);
 
 
-// createUserWithEmailAndPassword(auth, uemail, upassword)
-//     .then((userCredential) => {
-//         const user = userCredential.user;
-//         console.log("user=>", user)
-//     })
-//     .catch((error) => {
-//         const errorCode = error.code;
-//         const errorMessage = error.message;
-//         console.log("Error=>", errorMessage)
-//         // console.log("Error=>", errorCode)
-//     });
-// }
+// // // SignUp
+// // var btn = document.getElementById("signupBtn")
+// // btn.addEventListener("click", signup)
+
+// // function signup() {
+// //     var uemail = document.getElementById("uemail").value
+// //     var upassword = document.getElementById("upassword").value
+// //     console.log("usename=>",uemail, "useremail=>",upassword)
 
 
+// // createUserWithEmailAndPassword(auth, uemail, upassword)
+// //     .then((userCredential) => {
+// //         const user = userCredential.user;
+// //         console.log("user=>", user)
+// //     })
+// //     .catch((error) => {
+// //         const errorCode = error.code;
+// //         const errorMessage = error.message;
+// //         console.log("Error=>", errorMessage)
+// //         // console.log("Error=>", errorCode)
+// //     });
+// // }
 
 
 
@@ -66,45 +64,31 @@
 
 
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged ,signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
-
-// // const firebaseConfig = {
-// //     apiKey: process.env.API_KEY,
-// //     authDomain: Process.env.AUTH_DOMAIN,
-// //     projectId: Process.env.PROJECT_ID,
-// //     storageBucket: process.env.STORAGE_BUCKET,
-// //     messagingSenderId: process.env.ASSIGNING_SENDER_ID,
-// //     appId: process.env.APP_ID,
-// //     measurementId: process.env.MEASUREMENT_ID
-// // };
 
 
-
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+// import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
 
 // const firebaseConfig = {
-//     apiKey: "AIzaSyCcjdqVp7As57l179jjHS_Jeg40JVUXxLQ",
-//     authDomain: "ecommerce-c3693.firebaseapp.com",
-//     projectId: "ecommerce-c3693",
-//     storageBucket: "ecommerce-c3693.firebasestorage.app",
-//     messagingSenderId: "964054110394",
-//     appId: "964054110394:web:eddb9f4bbb3599bceb3283",
-//     measurementId: "G-ZF0Z8YDQX5"
+//     apiKey: process.env.API_KEY,
+//     authDomain: Process.env.AUTH_DOMAIN,
+//     projectId: Process.env.PROJECT_ID,
+//     storageBucket: process.env.STORAGE_BUCKET,
+//     messagingSenderId: process.env.ASSIGNING_SENDER_ID,
+//     appId: process.env.APP_ID,
+//     measurementId: process.env.MEASUREMENT_ID
 // };
 
+
 // const app = initializeApp(firebaseConfig);
-// const Auth = getAuth(app)
+// console.log("App Initialized:", app)
+// const auth = getAuth(app)
+// console.log("App Initialized:", auth)
 
-// // Signup
+// // // Signup
 
-// // var signupBtn = document.getElementById("signupBtn")
-// // signupBtn.addEventListener("click", signup)
-
-// // Login
-
-var loginBtn = document.getElementById("loginBtn")
-loginBtn.addEventListener("click",login)
-
+// var signupBtn = document.getElementById("signupBtn")
+// signupBtn.addEventListener("click", signup)
 
 
 // var userEmail = document.getElementById("useremail")
@@ -121,13 +105,120 @@ loginBtn.addEventListener("click",login)
 
 
 
+// function signup() {
+//     var uemail = userEmail.value
+//     var upassword = userPassword.value
+//     console.log("uemail", uemail, "upassword", upassword)
+// 
+
+//     createUserWithEmailAndPassword(Auth, uemail, upassword)
+//         .then((userCredential) => {
+//             const user = userCredential.user;
+//             console.log("user=>", user)
+//         })
+//         .catch((error) => {
+//             const errorCode = error.code;
+//             const errorMessage = error.message;
+//             console.log("Error=>", errorMessage)
+//             // console.log("Error=>", errorCode)
+//         });
+// }
+
+
+// Login
+
+// var loginBtn = document.getElementById("loginBtn")
+// loginBtn.addEventListener("click", login)
+
+// var loginAcc = document.getElementById("loginAcc")
+
+// onAuthStateChanged(auth, (user) => {
+//     if (user) {
+//         loginAcc.innerText = user.email
+//     }
+//     else {
+//         loginAcc.innerText = "No user Founded"
+//     }
+
+// })
+
+
+// function login() {
+//     var emailField = document.getElementById("lemail").value
+//     var passwordField = document.getElementById("lpassword").value
+//     // console.log("Email", emailField, "Password", passwordField)
+
+//     console.log("Koshish kar rahe hain:", emailField)
+
+//     // const auth = getAuth();
+//     signInWithEmailAndPassword(auth, emailField, passwordField)
+//         .then((userCredential) => {
+//             const user = userCredential.user;
+//             console.log("login Successful:", user)
+//         })
+//         .catch((error) => {
+//             const errorCode = error.code;
+//             const errorMessage = error.message;
+
+//             if (error.code === 'auth/invalid-email') {
+//                 alert("Email ka format sahi nahi hai.");
+//             } else if (error.code === 'auth/user-not-found') {
+//                 alert("Is email par koi account nahi mila.");
+//             }
+//         });
+// }
+
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js";
+import { getAuth, 
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword, onAuthStateChanged,
+    signOut,
+    GoogleAuthProvider,     
+    signInWithPopup,
+} from "https://www.gstatic.com/firebasejs/12.9.0/firebase-auth.js";
+
+const firebaseConfig = {
+    apiKey: process.env.API_KEY,
+    authDomain: Process.env.AUTH_DOMAIN,
+    projectId: Process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.ASSIGNING_SENDER_ID,
+    appId: process.env.APP_ID,
+    measurementId: process.env.MEASUREMENT_ID
+};
+
+const app = initializeApp(firebaseConfig);
+
+console.log("App initialized=>:", app);
+
+const auth = getAuth(app)
+
+console.log("auth=>", auth)
+
+
+// ==== SignUp
+
+var signupBtn = document.getElementById("signupBtn")
+signupBtn.addEventListener("click", signup)
+
+
+// ===== login / Signin
+
+var loginBtn = document.getElementById("loginBtn")
+loginBtn.addEventListener("click", login)
+
+
+// signup
+
 function signup() {
-    var uemail = userEmail.value
-    var upassword = userPassword.value
-    console.log("uemail", uemail, "upassword", upassword)
+    var semail = document.getElementById("semail").value
+    var spassword = document.getElementById("spassword").value
 
+    console.log("Email=>", semail)
+    console.log("Password=>", spassword)
 
-    createUserWithEmailAndPassword(Auth, uemail, upassword)
+    createUserWithEmailAndPassword(auth, semail, spassword)
         .then((userCredential) => {
             const user = userCredential.user;
             console.log("user=>", user)
@@ -135,37 +226,25 @@ function signup() {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log("Error=>", errorMessage)
-            // console.log("Error=>", errorCode)
+            console.log("errorMesaage=>", errorMessage)
+            console.log("errorCode=>", errorCode)
         });
+
 }
 
 
+// login
 
-onAuthStateChanged(Auth, (user) => {
-    if (user) {
-        loginAcc.innerText = user.email
-    } else {
-    }
-});
-
-
-onAuthStateChanged(Auth, (user) => {
-    if (user) {
-        // loginAcc.innerText = user.email
-
-    } else {
-    }
-});
-
+var output = document.getElementById("output")
 
 function login() {
     var lemail = document.getElementById("lemail").value
     var lpassword = document.getElementById("lpassword").value
-    console.log("uemail", lemail, "upassword", lpassword)
 
+    console.log("Email=>", lemail)
+    console.log("Password=>", lpassword)
 
-    signInWithEmailAndPassword (Auth, lemail, lpassword)
+    signInWithEmailAndPassword(auth, lemail, lpassword)
         .then((userCredential) => {
             const user = userCredential.user;
             console.log("user=>", user)
@@ -173,10 +252,65 @@ function login() {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log("Error=>", errorMessage)
-            console.log("Error=>", errorCode)
+            console.log("errorMesaage=>", errorMessage)
+            console.log("errorCode=>", errorCode)
+            output.innerText = "No user Found"
+            output.style.color = "red"
         });
+
 }
+
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        output.innerText = user.email
+        output.style.color = "green"
+    } else {
+        
+    }
+});
+
+
+var logoutBtn = document.getElementById("loginOutBtn")
+logoutBtn.addEventListener("click", logout)
+
+function logout() {
+    signOut(auth).then(() => {
+        output.innerText = "";
+    }).catch((error) => {
+        console.log("Error during sign out:", error);
+    });
+}
+
+
+
+// LoginWithGoogle
+const provider = new GoogleAuthProvider();
+
+
+var googleLoginBtn = document.getElementById("googleLoginBtn")
+googleLoginBtn.addEventListener("click",googleLogin)
+
+function googleLogin() {
+
+
+
+signInWithPopup(auth, provider)
+  .then((result) => {
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    const user = result.user;
+    console.log("Google Login Successful:", user)
+  }).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    const email = error.customData.email;
+    const credential = GoogleAuthProvider.credentialFromError(error);
+  });
+
+    }
+
+
 
 
 
