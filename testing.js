@@ -4,7 +4,7 @@ import {
     createUserWithEmailAndPassword,
     firebaseConfig,
     signInWithEmailAndPassword,
-    onAuthStateChanged, 
+    onAuthStateChanged,
     signOut
 } from "./firebase.js"
 
@@ -21,7 +21,8 @@ console.log("auth=>", auth)
 var signupBtn = document.getElementById("signupBtn");
 signupBtn.addEventListener("click", signup)
 
-var text = document.getElementById("alert")
+
+// Signup
 
 function signup() {
     var email = document.getElementById("email").value;
@@ -41,30 +42,7 @@ function signup() {
         });
 }
 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    text.innerText = user.email    
-  } else {
-    text.innerText = ""
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Signin
 
 var signinBtn = document.getElementById("loginBtn");
 signinBtn.addEventListener("click", login)
@@ -89,6 +67,15 @@ function login() {
 
 }
 
+var text = document.getElementById("output")
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        text.innerText = user.email
+    } else {
+        // text.innerText = error
+    }
+});
 
 
 
@@ -114,14 +101,15 @@ function login() {
 
 
 
-
-var signOutBtn = document.getElementById("loginOutBtn");
+var signOutBtn = document.getElementById("logoutBtn");
 
 signOutBtn.addEventListener("click", signout)
 
 function signout() {
     const auth = getAuth();
     signOut(auth).then(() => {
+        text.innerText = "";
+        console.log("logout Ho Gaya")
     }).catch((error) => {
         console.log("Signout nahi hua")
     });
